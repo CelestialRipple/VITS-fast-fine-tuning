@@ -61,6 +61,9 @@ def tts(model_name, speaker_id):
     if int(speaker_id) not in model["speakers_ids"].keys():
         return bottle.HTTPResponse(status=404, body=json.dumps({"error": "speaker_id not found", "speakers_ids": model["speakers_ids"]}), headers={'Content-Type': 'application/json'})
     
+    # text 字段必须存在
+    if 'text' not in bottle.request.json:
+        return bottle.HTTPResponse(status=422, body=json.dumps({"error": "text is required"}), headers={'Content-Type': 'application/json'})
     
     model["last_used"] = time.time()
     language  = None
