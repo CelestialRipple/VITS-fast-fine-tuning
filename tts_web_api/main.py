@@ -16,8 +16,13 @@ shutdown_event = threading.Event()
 
 @app.route('/models')
 def models():
-    # 遍历当前目录下的 models 文件夹，返回所有目录名字
-    response = bottle.HTTPResponse(status=200, body=json.dumps(os.listdir('models')), headers={'Content-Type': 'application/json'})
+    # 遍历当前目录下的 models 文件夹，返回所有目录名字, 只要文件夹
+    models = []
+    for model in os.listdir('models'):
+        if os.path.isdir(os.path.join('models', model)):
+            models.append(model)
+
+    response = bottle.HTTPResponse(status=200, body=json.dumps(models), headers={'Content-Type': 'application/json'})
     return response
 
 # 用于返回指定模型的所有speaker
