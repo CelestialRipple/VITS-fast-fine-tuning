@@ -90,5 +90,6 @@ POST /models/{模型名字}/speakers/{角色ID}
 * noise_scale_w 音素发音长度(可选) 默认为0.8
 * language 语言(可选) 默认为:简体中文, 选项有: 日本語, 简体中文,English
 
-返回: 
+返回:   
+
 wav 格式的文件
