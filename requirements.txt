@@ -22,3 +22,5 @@ opencc==1.1.1
 demucs
 openai-whisper
 gradio
+bottle
+schedule

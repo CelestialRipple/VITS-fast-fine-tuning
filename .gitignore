@@ -1,0 +1,6 @@
+__pycache__
+tts_web_api/models/*
+!tts_web_api/models/.gitkeep
+pyopenjtalk
+.idea
+.vscode
