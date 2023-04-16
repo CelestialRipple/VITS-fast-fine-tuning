@@ -88,6 +88,7 @@ POST /models/{模型名字}/speakers/{角色ID}
 * speed 语速(可选), 越小越慢, 默认为0.95
 * noise_scale 感情变化程度(可选) 默认为 0.667
 * noise_scale_w 音素发音长度(可选) 默认为0.8
+* language 语言(可选) 默认为:简体中文, 选项有: 日本語, 简体中文,English
 
 返回: 
 wav 格式的文件
