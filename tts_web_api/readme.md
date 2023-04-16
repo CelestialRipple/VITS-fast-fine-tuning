@@ -81,7 +81,7 @@ GET /models/{模型名字}/speakers
 
 
 ### 文字转语音
-POST http://127.0.0.1:3232/models/{模型名字}/speakers/{角色ID}
+POST /models/{模型名字}/speakers/{角色ID}
 ```
 参数:  
 * text 需要转换的文字(必须), 如果是 language=Mix 的情况下就需要带上语言标签
